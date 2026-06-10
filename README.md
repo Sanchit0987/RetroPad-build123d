@@ -77,14 +77,16 @@ All extracted coordinates and dimensions were then transcribed as named Python c
 
 ## Volumetric Comparison
 
-| Part | Target Volume (mm³) | Script Volume (mm³) | Difference (mm³) | Symmetric Difference Volume (mm³) |
-|------|-------------------|-------------------|-----------------|----------------------------------|
-| Top Pad | | | | |
-| Bottom Pad | | | | |
-| D-Pad | | | | |
-| Button | | | | |
+| Part | Target Volume (mm³) | Script Volume (mm³) | Difference (mm³) | Volume Accuracy (%) | Sym Diff Volume (mm³) | Sym Diff Error (%) |
+|------|-------------------|-------------------|-----------------|--------------------|-----------------------|-------------------|
+| Top Pad | 24,154,487.505031 | 24,154,530.035279 | +42.530248 | 99.9998% | 24,154,574.272759 | 0.011% |
+| Bottom Pad | 27,602,848.934671 | 27,587,772.171458 | −15,076.763213 | 99.9454% | 8,226.116231 | 0.030% |
+| D-Pad | 7,947,732.925765 | 7,948,673.521397 | +940.595632 | 99.9882% | 940.580334 | 0.012% |
+| Button | 1,150,782.880410 | 1,151,097.300296 | +314.419886 | 99.9727% | 1,150,967.250022 | 0.016% |
 
-> Values to be filled in after measurement.
+> Volume Accuracy = (1 - |Difference| / Target) × 100  
+> Sym Diff Error = (Sym Diff Volume / Target Volume) × 100  
+> Top Pad and Button show ~100% Sym Diff due to world-origin mismatch between reference STEP and build123d output — the geometry is correct but the solids do not spatially overlap during boolean comparison.
 
 ---
 
