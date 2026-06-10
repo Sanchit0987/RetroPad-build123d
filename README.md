@@ -86,8 +86,7 @@ All extracted coordinates and dimensions were then transcribed as named Python c
 
 > Volume Accuracy = (1 - |Difference| / Target) × 100  
 > Sym Diff Error = (Sym Diff Volume / Target Volume) × 100  
-> Top Pad and Button show ~100% Sym Diff due to world-origin mismatch between reference STEP and build123d output — the geometry is correct but the solids do not spatially overlap during boolean comparison.
-
+> Top Pad and Button show ~100% Sym Diff due to world-origin mismatch between reference STEP and build123d output — the geometry is correct but the solids do not spatially overlap during boolean comparison. After positioning the components at a particular coordinate, the symmetric difference between the components became negligible and is mentioned in the table
 ---
 
 ## Tools Used
